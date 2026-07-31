@@ -30,14 +30,15 @@
     }
     a { color: inherit; }
     .hero {
-      min-height: 78vh;
+      min-height: 0;
+      aspect-ratio: 3 / 1;
       display: grid;
       align-items: end;
       padding: 28px 18px 32px;
       color: white;
       background:
         linear-gradient(180deg, rgba(8,27,32,.04) 20%, rgba(8,27,32,.18) 50%, rgba(8,27,32,.9) 100%),
-        url("tokyo-hero-v3.png") center / cover no-repeat;
+        url("tokyo-hero-v4.png") center / cover no-repeat;
     }
     .hero-inner { width: min(960px, 100%); margin: 0 auto; }
     .kicker { margin: 0 0 10px; font-size: .78rem; font-weight: 850; letter-spacing: .18em; opacity: .8; }
@@ -109,7 +110,14 @@
     .btn { min-height: 36px; display: inline-flex; align-items: center; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: #e7edf5; color: var(--night); text-decoration: none; font-weight: 800; font-size: .86rem; }
     .top-button { position: fixed; right: 16px; bottom: 16px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: white; text-decoration: none; box-shadow: 0 4px 14px rgba(24,42,74,.26); }
     @media (min-width:720px) { .summary { grid-template-columns: repeat(4,minmax(0,1fr)); } }
-    @media (max-width:650px) { .stay-grid { grid-template-columns: 1fr; } .topline { display: grid; grid-template-columns: 82px 1fr; } }
+    @media (max-width:650px) {
+      .stay-grid { grid-template-columns: 1fr; }
+      .topline { display: grid; grid-template-columns: 82px 1fr; }
+      .hero { min-height: 0; aspect-ratio: 3 / 1; padding: 10px 14px; }
+      .hero h1 { margin-bottom: 4px; font-size: clamp(1.45rem, 7vw, 2rem); }
+      .hero .subtitle { font-size: .7rem; line-height: 1.25; }
+      .hero .kicker, .hero .summary { display: none; }
+    }
   </style>
 </head>
 <body>
