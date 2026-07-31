@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="東京 2026 六日自由行靜態行程表">
-  <title>東京 2026｜六日自由行</title>
+  <meta name="description" content="東京 2026 十日自由行靜態行程表">
+  <title>東京 2026｜十日自由行</title>
   <style>
     :root {
       color-scheme: light;
@@ -88,10 +88,11 @@
     .notice strong { color: var(--night); }
     .stay-section { margin: 0 0 20px; padding: 16px 0 18px; border-bottom: 1px solid var(--line); }
     .stay-section h2 { margin: 0 0 10px; font-size: 1.2rem; color: var(--road); }
-    .stay-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+    .stay-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
     .stay-card, .item { padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); box-shadow: 0 2px 8px rgba(24,42,74,.045); }
     .stay-title { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
     .stay-card p { margin: 0; color: var(--muted); font-size: .93rem; }
+    .stay-card .dates { margin-bottom: 5px; color: var(--ink); font-weight: 750; }
     .badge { flex: 0 0 auto; padding: 3px 8px; border-radius: 999px; background: var(--mist); color: var(--road); font-size: .76rem; font-weight: 900; }
     .day { padding: 22px 0; border-top: 1px solid var(--line); scroll-margin-top: 64px; }
     .day h2 { margin: 0 0 6px; color: var(--night); font-size: 1.45rem; }
@@ -110,8 +111,8 @@
     .btn { min-height: 36px; display: inline-flex; align-items: center; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: #e7edf5; color: var(--night); text-decoration: none; font-weight: 800; font-size: .86rem; }
     .top-button { position: fixed; right: 16px; bottom: 16px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: white; text-decoration: none; box-shadow: 0 4px 14px rgba(24,42,74,.26); }
     @media (min-width:720px) { .summary { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+    @media (max-width:820px) { .stay-grid { grid-template-columns: 1fr; } }
     @media (max-width:650px) {
-      .stay-grid { grid-template-columns: 1fr; }
       .topline { display: grid; grid-template-columns: 82px 1fr; }
       .hero { min-height: 0; aspect-ratio: 3 / 1; padding: 10px 14px; }
       .hero h1 { margin-bottom: 4px; font-size: clamp(1.45rem, 7vw, 2rem); }
@@ -124,11 +125,11 @@
   <header class="hero">
     <div class="hero-inner">
       <p class="kicker">TOKYO TRIP 2026</p>
-      <h1>東京 6 日自由行</h1>
-      <p class="subtitle">2026/10/08–10/13｜以淺草為據點，安排東京市區與鎌倉一日小旅行。</p>
+      <h1>東京 10 日自由行</h1>
+      <p class="subtitle">2026/12/24–2027/01/02｜新宿、箱根、淺草三段住宿的跨年旅行。</p>
       <div class="summary">
         <span class="pill">✈ 桃園 ⇄ 成田</span>
-        <span class="pill">🏨 東京 5 晚</span>
+        <span class="pill">🏨 3 間飯店・9 晚</span>
         <span class="pill">🚆 Suica＋單程票</span>
         <span class="pill">👟 市區步行為主</span>
       </div>
@@ -137,42 +138,53 @@
 
   <main>
     <nav class="nav" aria-label="行程日期快速跳轉">
-      <a href="#d1008">10/08</a><a href="#d1009">10/09</a><a href="#d1010">10/10</a>
-      <a href="#d1011">10/11</a><a href="#d1012">10/12</a><a href="#d1013">10/13</a>
+      <a href="#d1224">12/24</a><a href="#d1225">12/25</a><a href="#d1226">12/26</a>
+      <a href="#d1227">12/27</a><a href="#d1228">12/28</a><a href="#d1229">12/29</a>
+      <a href="#d1230">12/30</a><a href="#d1231">12/31</a><a href="#d0101">01/01</a><a href="#d0102">01/02</a>
       <a href="#stay">住宿</a><a href="#notes">提醒</a>
     </nav>
 
     <div class="notice"><strong>行程使用方式：</strong>每天保留彈性時間；營業時間、票價與預約規則請在出發前再次確認。</div>
 
     <section class="stay-section" id="stay">
-      <h2>住宿與交通摘要</h2>
+      <h2>住宿與跨城交通</h2>
       <div class="stay-grid">
         <article class="stay-card">
-          <div class="stay-title"><strong>淺草站周邊飯店</strong><span class="badge">5 晚</span></div>
-          <p>建議選擇步行 10 分鐘內可到銀座線或淺草線的住宿，往返機場與市區都方便。</p>
+          <div class="stay-title"><strong>格拉斯麗新宿酒店</strong><span class="badge">新宿</span></div>
+          <p class="dates">12/24 入住－12/26 退房｜2 晚</p>
+          <p>東京都新宿區歌舞伎町，抵達東京後的第一段住宿。</p>
+          <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div>
         </article>
         <article class="stay-card">
-          <div class="stay-title"><strong>主要交通</strong><span class="badge">IC 卡</span></div>
-          <p>東京市區以 Suica 搭配單程票即可；鎌倉日另查 JR 來回票價。</p>
+          <div class="stay-title"><strong>箱根水明莊</strong><span class="badge">箱根湯本</span></div>
+          <p class="dates">12/26 入住－12/27 退房｜1 晚</p>
+          <p>神奈川縣箱根町，安排一晚溫泉住宿。</p>
+          <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Suimeisou" target="_blank" rel="noreferrer">Google Maps ↗</a></div>
+        </article>
+        <article class="stay-card">
+          <div class="stay-title"><strong>格拉斯麗淺草酒店</strong><span class="badge">淺草</span></div>
+          <p class="dates">12/27 入住－2027/01/02 退房｜6 晚</p>
+          <p>東京都台東區淺草，後半段東京行程與跨年住宿。</p>
+          <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div>
         </article>
       </div>
     </section>
 
-    <section class="day" id="d1008">
-      <h2>2026/10/08（四）｜抵達東京・淺草夜散步</h2>
-      <p class="route">桃園 → 成田機場 → 淺草 → 雷門・隅田川</p>
-      <div class="meta-row"><span class="tag city">抵達日</span><span class="tag">電車</span><span class="tag sleep">淺草住宿</span></div>
+    <section class="day" id="d1224">
+      <h2>2026/12/24（四）｜19:00 抵達東京</h2>
+      <p class="route">桃園 → 成田機場 → 新宿 → 飯店入住</p>
+      <div class="meta-row"><span class="tag city">抵達日</span><span class="tag">電車</span><span class="tag sleep">新宿住宿</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time">14:30</span><span class="what">抵達成田國際機場</span></div><p class="note">入境、領取行李與 Suica，預留約 90 分鐘。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Narita+International+Airport" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">16:20</span><span class="what">前往淺草</span></div><p class="note">搭乘 Skyliner 至上野，再轉銀座線；依住宿位置也可搭 Access 特急。</p></article>
-        <article class="item"><div class="topline"><span class="time">19:30</span><span class="what">雷門、仲見世與隅田川夜散步</span></div><p class="note">夜間人少，適合慢慢散步拍照。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kaminarimon+Gate" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time reserved">19:00</span><span class="what">抵達成田國際機場</span></div><p class="note">入境、領取行李與交通準備，晚間不另排景點。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Narita+International+Airport" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">20:30</span><span class="what">前往新宿</span></div><p class="note">依當日班次選擇成田特快或機場巴士，預留入境延誤彈性。</p></article>
+        <article class="item"><div class="topline"><span class="time">22:30</span><span class="what">格拉斯麗新宿酒店入住</span></div><p class="note">抵達後休息，晚餐以機場或飯店周邊簡單用餐為主。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
       </div>
     </section>
 
-    <section class="day" id="d1009">
-      <h2>2026/10/09（五）｜上野・谷中・秋葉原</h2>
-      <p class="route">淺草 → 上野公園 → 谷中銀座 → 秋葉原 → 神田</p>
-      <div class="meta-row"><span class="tag city">市區</span><span class="tag">步行</span><span class="tag">博物館</span></div>
+    <section class="day" id="d1225">
+      <h2>2026/12/25（五）｜上野・谷中・秋葉原</h2>
+      <p class="route">新宿 → 上野公園 → 谷中銀座 → 秋葉原 → 新宿</p>
+      <div class="meta-row"><span class="tag city">市區</span><span class="tag">步行</span><span class="tag sleep">新宿住宿</span></div>
       <div class="items">
         <article class="item"><div class="topline"><span class="time">08:30</span><span class="what">上野公園與不忍池</span></div><p class="note">由京成上野側進入，早上先走戶外區域。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Ueno+Park" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
         <article class="item"><div class="topline"><span class="time">10:00</span><span class="what">東京國立博物館</span></div><p class="note">建議先鎖定日本館與東洋館，停留約 2 小時。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Tokyo+National+Museum" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
@@ -181,31 +193,30 @@
       </div>
     </section>
 
-    <section class="day" id="d1010">
-      <h2>2026/10/10（六）｜明治神宮・原宿・澀谷</h2>
-      <p class="route">明治神宮 → 表參道 → 澀谷 → Shibuya Sky</p>
-      <div class="meta-row"><span class="tag city">市區</span><span class="tag">步行</span><span class="tag">需預約</span></div>
+    <section class="day" id="d1226">
+      <h2>2026/12/26（六）｜新宿退房・前往箱根</h2>
+      <p class="route">格拉斯麗新宿酒店 → 箱根湯本 → 箱根水明莊</p>
+      <div class="meta-row"><span class="tag city">移動日</span><span class="tag">退房／入住</span><span class="tag sleep">箱根住宿</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time">08:00</span><span class="what">明治神宮</span></div><p class="note">從原宿站進入，早晨較安靜；參道範圍大，穿好走的鞋。</p></article>
-        <article class="item"><div class="topline"><span class="time">11:00</span><span class="what">原宿、表參道午餐與建築散步</span></div><p class="note">沿貓街一路往澀谷移動，避開竹下通最擁擠時段。</p></article>
-        <article class="item"><div class="topline"><span class="time reserved">18:00</span><span class="what">Shibuya Sky</span></div><p class="note">建議預約日落前 45 分鐘的入場時段；遇強風屋頂可能關閉。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Sky" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">20:00</span><span class="what">六本木けやき坂</span></div><p class="note">從櫸坂可望見東京塔，也是本行程封面圖的取景方向；夜間燈飾期間景色尤其明顯。</p><div class="links"><a class="btn" href="https://maps.app.goo.gl/bzw1FcgLqK1isr1j6" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">上午</span><span class="what">格拉斯麗新宿酒店退房</span></div><p class="note">實際出發時間待箱根行程確認後補上。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">待定</span><span class="what">前往箱根湯本</span></div><p class="note">交通班次與沿途景點之後安排。</p></article>
+        <article class="item"><div class="topline"><span class="time">入住時間待定</span><span class="what">箱根水明莊入住</span></div><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Suimeisou" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
       </div>
     </section>
 
-    <section class="day" id="d1011">
-      <h2>2026/10/11（日）｜鎌倉一日小旅行</h2>
-      <p class="route">東京 → 北鎌倉 → 鎌倉 → 長谷 → 東京</p>
-      <div class="meta-row"><span class="tag city">近郊</span><span class="tag">JR</span><span class="tag">雨天可調整</span></div>
+    <section class="day" id="d1227">
+      <h2>2026/12/27（日）｜箱根退房・前往淺草</h2>
+      <p class="route">箱根水明莊 → 東京 → 格拉斯麗淺草酒店</p>
+      <div class="meta-row"><span class="tag city">移動日</span><span class="tag">退房／入住</span><span class="tag sleep">淺草住宿</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time">07:30</span><span class="what">東京出發前往北鎌倉</span></div><p class="note">搭 JR 橫須賀線，避開較晚出發的人潮。</p></article>
-        <article class="item"><div class="topline"><span class="time">09:00</span><span class="what">圓覺寺、鶴岡八幡宮</span></div><p class="note">由北鎌倉一路步行至鎌倉站，途中依體力刪減寺院。</p></article>
-        <article class="item"><div class="topline"><span class="time">15:00</span><span class="what">長谷寺、鎌倉大佛</span></div><p class="note">搭江之電前往長谷；傍晚視天氣決定是否續往海邊。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kotoku-in+Kamakura" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">上午</span><span class="what">箱根水明莊退房</span></div><p class="note">箱根上午行程與離開時間之後安排。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Suimeisou" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">待定</span><span class="what">箱根前往淺草</span></div><p class="note">交通與行李安排待後續確認。</p></article>
+        <article class="item"><div class="topline"><span class="time">入住時間待定</span><span class="what">格拉斯麗淺草酒店入住</span></div><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
       </div>
     </section>
 
-    <section class="day" id="d1012">
-      <h2>2026/10/12（一）｜築地・銀座・東京站</h2>
+    <section class="day" id="d1228">
+      <h2>2026/12/28（一）｜築地・銀座・東京站</h2>
       <p class="route">築地場外市場 → 銀座 → 皇居外苑 → 東京站</p>
       <div class="meta-row"><span class="tag city">市區</span><span class="tag">購物</span><span class="tag">步行</span></div>
       <div class="items">
@@ -213,17 +224,47 @@
         <article class="item"><div class="topline"><span class="time">11:00</span><span class="what">銀座文具與百貨</span></div><p class="note">伊東屋、無印良品與百貨集中，可依購物清單安排。</p></article>
         <article class="item"><div class="topline"><span class="time">15:00</span><span class="what">皇居外苑、丸之內建築散步</span></div><p class="note">雨天可直接改走地下街。</p></article>
         <article class="item"><div class="topline"><span class="time">18:00</span><span class="what">東京站晚餐與伴手禮</span></div><p class="note">確認隔日機場交通與行李重量。</p></article>
+        <article class="item"><div class="topline"><span class="time">20:00</span><span class="what">六本木けやき坂</span></div><p class="note">從櫸坂眺望東京塔，也是本行程封面圖的取景方向。</p><div class="links"><a class="btn" href="https://maps.app.goo.gl/bzw1FcgLqK1isr1j6" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
       </div>
     </section>
 
-    <section class="day" id="d1013">
-      <h2>2026/10/13（二）｜最後散步・返回台灣</h2>
-      <p class="route">淺草 → 成田機場 → 桃園</p>
-      <div class="meta-row"><span class="tag city">回程日</span><span class="tag">電車</span><span class="tag">預留時間</span></div>
+    <section class="day" id="d1229">
+      <h2>2026/12/29（二）｜東京市區行程待安排</h2>
+      <p class="route">以格拉斯麗淺草酒店為起終點</p>
+      <div class="meta-row"><span class="tag city">市區</span><span class="tag">待安排</span><span class="tag sleep">淺草住宿</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time">08:30</span><span class="what">淺草最後散步、早餐</span></div><p class="note">依退房時間縮短，不安排跨區景點。</p></article>
-        <article class="item"><div class="topline"><span class="time">10:30</span><span class="what">退房、前往機場</span></div><p class="note">出發前再次確認航廈、交通班次與護照。</p></article>
-        <article class="item"><div class="topline"><span class="time reserved">起飛前 3 小時</span><span class="what">抵達成田機場</span></div><p class="note">航班時間確認後，再換成實際時間與班號。</p></article>
+        <article class="item"><div class="topline"><span class="time">待定</span><span class="what">當日行程待安排</span></div><p class="note">日期已保留，之後再加入景點與交通時間。</p></article>
+      </div>
+    </section>
+
+    <section class="day" id="d1230">
+      <h2>2026/12/30（三）｜東京市區行程待安排</h2>
+      <p class="route">以格拉斯麗淺草酒店為起終點</p>
+      <div class="meta-row"><span class="tag city">市區</span><span class="tag">待安排</span><span class="tag sleep">淺草住宿</span></div>
+      <div class="items"><article class="item"><div class="topline"><span class="time">待定</span><span class="what">當日行程待安排</span></div><p class="note">日期已保留，之後再加入景點與交通時間。</p></article></div>
+    </section>
+
+    <section class="day" id="d1231">
+      <h2>2026/12/31（四）｜東京跨年行程待安排</h2>
+      <p class="route">以格拉斯麗淺草酒店為起終點</p>
+      <div class="meta-row"><span class="tag city">跨年日</span><span class="tag">待安排</span><span class="tag sleep">淺草住宿</span></div>
+      <div class="items"><article class="item"><div class="topline"><span class="time">待定</span><span class="what">跨年行程待安排</span></div><p class="note">日期已保留；待確認跨年地點後再補上末班車與交通資訊。</p></article></div>
+    </section>
+
+    <section class="day" id="d0101">
+      <h2>2027/01/01（五）｜東京元旦行程待安排</h2>
+      <p class="route">以格拉斯麗淺草酒店為起終點</p>
+      <div class="meta-row"><span class="tag city">元旦</span><span class="tag">待安排</span><span class="tag sleep">淺草住宿</span></div>
+      <div class="items"><article class="item"><div class="topline"><span class="time">待定</span><span class="what">元旦行程待安排</span></div><p class="note">日期已保留；需留意元旦店休與特別營業時間。</p></article></div>
+    </section>
+
+    <section class="day" id="d0102">
+      <h2>2027/01/02（六）｜退房・返回台灣</h2>
+      <p class="route">淺草 → 機場 → 桃園</p>
+      <div class="meta-row"><span class="tag city">回程日</span><span class="tag">航班待確認</span><span class="tag">預留時間</span></div>
+      <div class="items">
+        <article class="item"><div class="topline"><span class="time">退房前</span><span class="what">格拉斯麗淺草酒店退房</span></div><p class="note">退房與行李安排依回程航班時間調整。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time reserved">起飛前 3 小時</span><span class="what">抵達機場</span></div><p class="note">回程航班確認後，再補上實際時間、機場與航廈。</p></article>
       </div>
     </section>
 
