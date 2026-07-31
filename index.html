@@ -100,6 +100,13 @@
     .stay-card p { margin: 0; color: var(--muted); font-size: .93rem; }
     .stay-card .dates { margin-bottom: 5px; color: var(--ink); font-weight: 750; }
     .badge { flex: 0 0 auto; padding: 3px 8px; border-radius: 999px; background: var(--mist); color: var(--road); font-size: .76rem; font-weight: 900; }
+    .booking-section { margin: 0 0 20px; padding: 0 0 20px; border-bottom: 1px solid var(--line); }
+    .booking-section h2 { margin: 0 0 10px; font-size: 1.2rem; color: var(--road); }
+    .booking-grid { display: grid; gap: 10px; }
+    .booking-card { padding: 12px; border: 1px solid #e8b6a9; border-radius: 8px; background: #fff8f5; }
+    .booking-card strong { color: var(--night); }
+    .booking-card p { margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
+    .pending { display: inline-flex; margin-left: 7px; padding: 3px 8px; border-radius: 999px; background: #ffe1d8; color: #963a29; font-size: .76rem; font-weight: 900; }
     .day { padding: 22px 0; border-top: 1px solid var(--line); scroll-margin-top: 64px; }
     .day h2 { margin: 0 0 6px; color: var(--night); font-size: 1.45rem; }
     .route { margin: 0 0 13px; color: var(--muted); font-weight: 650; }
@@ -149,6 +156,7 @@
   <main>
     <nav class="nav" aria-label="行程日期快速跳轉">
       <a href="#stay">🏨 住宿</a>
+      <a href="#tickets">🎫 待訂票</a>
       <a href="#d1224">12/24 四<span>新宿</span></a>
       <a href="#d1225">12/25 五<span>新宿</span></a>
       <a href="#d1226">12/26 六<span>箱根</span></a>
@@ -162,7 +170,7 @@
       <a href="#notes">📌 提醒</a>
     </nav>
 
-    <div class="notice"><strong>行程使用方式：</strong>每天保留彈性時間；營業時間、票價與預約規則請在出發前再次確認。</div>
+    <div class="notice"><strong>交通時刻說明：</strong>已依 2026 現行官方班表安排；年底正式班次與座位開放後，請由「待訂交通票」再次確認並完成購票。</div>
 
     <section class="stay-section" id="stay">
       <h2>住宿與跨城交通</h2>
@@ -185,14 +193,36 @@
       </div>
     </section>
 
+    <section class="booking-section" id="tickets">
+      <h2>待訂交通票</h2>
+      <div class="booking-grid">
+        <article class="booking-card">
+          <strong>12/24｜N’EX 成田特快 52 號</strong><span class="pending">尚未訂票</span>
+          <p>成田機場 T2・3 20:47 → 新宿 22:09。以 2026 現行時刻暫排，12 月正式班次開放後再確認；JR 東日本原則上於乘車日前 1 個月開賣。</p>
+          <div class="links"><a class="btn" href="https://www.eki-net.com/en/jreast-train-reservation/Top/Index" target="_blank" rel="noreferrer">JR-EAST 訂票（可切繁中）↗</a><a class="btn" href="https://www.jreast.co.jp/en/multi/nex/" target="_blank" rel="noreferrer">N’EX 官方資訊 ↗</a></div>
+        </article>
+        <article class="booking-card">
+          <strong>12/26｜Romancecar はこね 3 號</strong><span class="pending">尚未訂票</span>
+          <p>新宿 08:00 → 箱根湯本 09:24。全車指定席；需購買特急券。為了不在小田原處理拆票，建議直接買「新宿出發 2 日箱根周遊券」涵蓋普通車資與箱根區內交通；回程額度雖不使用，但轉乘最簡單。乘車日前 1 個月開賣。</p>
+          <div class="links"><a class="btn" href="https://www.web-odakyu.com/e-romancecar/?language=en" target="_blank" rel="noreferrer">e-Romancecar（可切繁中）↗</a><a class="btn" href="https://www.hakonenavi.jp/international/tw/discount_passes/free_pass" target="_blank" rel="noreferrer">箱根周遊券官方 ↗</a></div>
+        </article>
+        <article class="booking-card">
+          <strong>12/27｜東海道新幹線 小田原 → 品川</strong><span class="pending">尚未訂票</span>
+          <p>暫抓 11:30 左右的小田原出發班次，約半小時到品川；鎖定有停小田原的 Kodama 或 Hikari。SmartEX 可先提出預約，座位於乘車日前 1 個月確認。</p>
+          <div class="links"><a class="btn" href="https://smart-ex.jp/en/" target="_blank" rel="noreferrer">SmartEX 官方訂票 ↗</a><a class="btn" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank" rel="noreferrer">JR 東海時刻表 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
     <section class="day" id="d1224">
       <h2>2026/12/24（四）｜19:00 抵達東京</h2>
       <p class="route">桃園 → 成田機場 → 新宿 → 飯店入住</p>
       <div class="meta-row"><span class="tag city">抵達日</span><span class="tag">電車</span><span class="tag sleep">新宿住宿</span></div>
       <div class="items">
         <article class="item flight-card"><div class="topline"><span class="time">15:00–19:00</span><span class="what">搭乘飛機 <span class="flight-no">✈ JX804</span></span></div><p class="note">桃園飛往成田；19:00 抵達後辦理入境並領取行李。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Taiwan+Taoyuan+International+Airport" target="_blank" rel="noreferrer">桃園機場 Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">20:30</span><span class="what">前往新宿</span></div><p class="note">依當日班次選擇成田特快或機場巴士，預留入境延誤彈性。</p></article>
-        <article class="item"><div class="topline"><span class="time">22:30</span><span class="what">格拉斯麗新宿酒店入住</span></div><p class="note">抵達後休息，晚餐以機場或飯店周邊簡單用餐為主。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">19:00–20:25</span><span class="what">成田機場 T2 入境、領行李</span></div><p class="note">星宇航空使用第二航廈；完成入境後前往 B1 的 JR 車站。若 20:25 尚未到月台，改搭下一班或機場巴士，不要硬趕。</p><div class="links"><a class="btn" href="https://www.narita-airport.jp/zh-tc/flight/airline-search/sjx/" target="_blank" rel="noreferrer">成田機場星宇航廈資訊 ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time reserved">20:47–22:09</span><span class="what">N’EX 成田特快 52 號直達新宿 <span class="pending">尚未訂票</span></span></div><p class="note">由成田機場 T2・3 站搭車，不需換車。此為 2026 現行班次，12 月正式時刻公布後再確認。</p><div class="links"><a class="btn" href="https://www.eki-net.com/en/jreast-train-reservation/Top/Index" target="_blank" rel="noreferrer">官方訂票（可切繁中）↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">22:10–22:35</span><span class="what">新宿站前往格拉斯麗新宿酒店</span></div><p class="note">帶行李且已晚，建議由新宿站搭短程計程車；若步行約需 15 分鐘。入住後直接休息。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
       </div>
     </section>
 
@@ -209,24 +239,34 @@
     </section>
 
     <section class="day" id="d1226">
-      <h2>2026/12/26（六）｜新宿退房・前往箱根</h2>
-      <p class="route">格拉斯麗新宿酒店 → 箱根湯本 → 箱根水明莊</p>
-      <div class="meta-row"><span class="tag city">移動日</span><span class="tag">退房／入住</span><span class="tag sleep">箱根住宿</span></div>
+      <h2>2026/12/26（六）｜Romancecar・箱根經典環線</h2>
+      <p class="route">新宿 → 箱根湯本寄放行李 → 強羅 → 大湧谷 → 蘆之湖 → 箱根神社 → 箱根湯本</p>
+      <div class="meta-row"><span class="tag city">箱根</span><span class="tag">環線順遊</span><span class="tag sleep">箱根水明莊</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time">上午</span><span class="what">格拉斯麗新宿酒店退房</span></div><p class="note">實際出發時間待箱根行程確認後補上。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">待定</span><span class="what">前往箱根湯本</span></div><p class="note">交通班次與沿途景點之後安排。</p></article>
-        <article class="item"><div class="topline"><span class="time">入住時間待定</span><span class="what">箱根水明莊入住</span></div><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Suimeisou" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">06:50–07:20</span><span class="what">退房、前往小田急新宿站</span></div><p class="note">飯店到車站帶行李建議搭短程計程車，07:30 前抵達月台。</p></article>
+        <article class="item"><div class="topline"><span class="time reserved">08:00–09:24</span><span class="what">Romancecar はこね 3 號 <span class="pending">尚未訂票</span></span></div><p class="note">新宿直達箱根湯本，全車指定席。另買新宿出發 2 日箱根周遊券作為普通乘車券與箱根區內通票；Romancecar 特急券需另外購買。</p><div class="links"><a class="btn" href="https://www.web-odakyu.com/e-romancecar/?language=en" target="_blank" rel="noreferrer">官方訂票（可切繁中）↗</a><a class="btn" href="https://www.hakonenavi.jp/international/tw/discount_passes/free_pass" target="_blank" rel="noreferrer">箱根周遊券 ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">09:25–09:45</span><span class="what">箱根水明莊寄放行李</span></div><p class="note">由箱根湯本站步行約 2–3 分鐘。旅館官方確認入住前可寄放行李，先輕裝再開始環線。</p><div class="links"><a class="btn" href="https://www.suimeisou.com/faq/" target="_blank" rel="noreferrer">水明莊行李規定 ↗</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Suimeisou" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">09:50–11:05</span><span class="what">登山電車＋登山纜車：箱根湯本 → 強羅 → 早雲山</span></div><p class="note">一路向上不折返；轉乘時預留排隊時間。</p></article>
+        <article class="item"><div class="topline"><span class="time">11:05–12:20</span><span class="what">箱根空中纜車・大湧谷</span></div><p class="note">早雲山搭纜車至大湧谷，停留看火山地景、富士山與吃黑蛋。冬季纜車營運至 16:15，先排這段最安全。</p><div class="links"><a class="btn" href="https://www.hakonenavi.jp/international/tw/transportation/hakone-ropeway" target="_blank" rel="noreferrer">纜車官方資訊 ↗</a><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Owakudani" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">12:20–13:10</span><span class="what">空中纜車：大湧谷 → 桃源台</span></div><p class="note">沿途可看蘆之湖；大湧谷站需依指示換乘，抵達後預留海賊船候船時間。</p></article>
+        <article class="item"><div class="topline"><span class="time">13:10–13:50</span><span class="what">箱根海賊觀光船：桃源台 → 元箱根港</span></div><p class="note">冬季航程約 25–40 分鐘，搭最接近的船班；若錯過就順延，不壓縮前段纜車。</p><div class="links"><a class="btn" href="https://www.hakonenavi.jp/international/tw/transportation/hakone-kankosen" target="_blank" rel="noreferrer">海賊船官方資訊 ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">13:50–15:30</span><span class="what">元箱根午餐・箱根神社</span></div><p class="note">由元箱根港沿湖步行前往神社與水中鳥居，再原路回到巴士站。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Shrine" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">15:40–16:35</span><span class="what">登山巴士返回箱根湯本</span></div><p class="note">由元箱根港搭 H／R／K 路線中可直達箱根湯本的班次，避開再繞回纜車。</p></article>
+        <article class="item"><div class="topline"><span class="time">16:40 起</span><span class="what">箱根水明莊入住・溫泉與晚餐</span></div><p class="note">旅館入住時間 14:00–18:00；回房後不再安排遠距離景點。</p></article>
       </div>
     </section>
 
     <section class="day" id="d1227">
-      <h2>2026/12/27（日）｜箱根退房・前往淺草</h2>
-      <p class="route">箱根水明莊 → 東京 → 格拉斯麗淺草酒店</p>
-      <div class="meta-row"><span class="tag city">移動日</span><span class="tag">退房／入住</span><span class="tag sleep">淺草住宿</span></div>
+      <h2>2026/12/27（日）｜箱根湯本・新幹線前往淺草</h2>
+      <p class="route">箱根水明莊 → 小田原 → 品川 → 淺草</p>
+      <div class="meta-row"><span class="tag city">移動日</span><span class="tag">新幹線</span><span class="tag sleep">格拉斯麗淺草</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time">上午</span><span class="what">箱根水明莊退房</span></div><p class="note">箱根上午行程與離開時間之後安排。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Suimeisou" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">待定</span><span class="what">箱根前往淺草</span></div><p class="note">交通與行李安排待後續確認。</p></article>
-        <article class="item"><div class="topline"><span class="time">入住時間待定</span><span class="what">格拉斯麗淺草酒店入住</span></div><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">08:00–10:20</span><span class="what">早餐、箱根湯本商店街散步</span></div><p class="note">不再上山，保留溫泉旅館的早晨；採買後回旅館拿行李。</p></article>
+        <article class="item"><div class="topline"><span class="time">10:30–10:45</span><span class="what">箱根水明莊退房</span></div><p class="note">官方退房期限為 11:00，預留步行與轉乘時間。</p><div class="links"><a class="btn" href="https://www.suimeisou.com/faq/" target="_blank" rel="noreferrer">旅館官方資訊 ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">10:50–11:10</span><span class="what">箱根登山線：箱根湯本 → 小田原</span></div><p class="note">抵達小田原後依指標前往東海道新幹線月台。</p></article>
+        <article class="item"><div class="topline"><span class="time reserved">11:30 前後</span><span class="what">東海道新幹線：小田原 → 品川 <span class="pending">尚未訂票</span></span></div><p class="note">選擇有停小田原的 Kodama 或 Hikari，車程約 30 分鐘；12 月正式時刻確認後鎖定班次。</p><div class="links"><a class="btn" href="https://smart-ex.jp/en/" target="_blank" rel="noreferrer">SmartEX 官方訂票 ↗</a><a class="btn" href="https://global.jr-central.co.jp/en/info/timetable/" target="_blank" rel="noreferrer">官方時刻表 ↗</a></div></article>
+        <article class="item"><div class="topline"><span class="time">12:15–13:00</span><span class="what">品川 → 淺草（京急線直通都營淺草線）</span></div><p class="note">在品川轉乘往青砥、印旛日本醫大等方向的直通列車，可不換車抵達淺草站；若眼前班次不直通，等下一班或依站內指示轉乘。</p></article>
+        <article class="item"><div class="topline"><span class="time">13:10 起</span><span class="what">格拉斯麗淺草酒店寄放行李／辦理入住</span></div><p class="note">先放行李再吃午餐；若客房尚未開放，稍後再回飯店領房卡。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
       </div>
     </section>
 
