@@ -106,6 +106,9 @@
     .time { flex: 0 0 auto; min-width: 82px; color: var(--road); font-weight: 900; font-size: .92rem; }
     .time.reserved { color: var(--accent); }
     .what { flex: 1 1 auto; min-width: 0; font-weight: 900; }
+    .flight-card .topline { align-items: center; }
+    .flight-card .time { min-width: 0; padding: 5px 10px; border-radius: 999px; background: #17477d; color: white; font-size: 1rem; }
+    .flight-no { display: inline-flex; margin-left: 8px; padding: 3px 9px; border: 2px solid #17477d; border-radius: 8px; color: #17477d; font-size: .92rem; white-space: nowrap; }
     .note { margin: 6px 0 0; color: var(--muted); font-size: .93rem; }
     .links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
     .btn { min-height: 36px; display: inline-flex; align-items: center; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: #e7edf5; color: var(--night); text-decoration: none; font-weight: 800; font-size: .86rem; }
@@ -114,6 +117,7 @@
     @media (max-width:820px) { .stay-grid { grid-template-columns: 1fr; } }
     @media (max-width:650px) {
       .topline { display: grid; grid-template-columns: 82px 1fr; }
+      .flight-card .topline { display: flex; flex-wrap: wrap; }
       .hero { min-height: 0; aspect-ratio: 3 / 1; padding: 10px 14px; }
       .hero h1 { margin-bottom: 4px; font-size: clamp(1.45rem, 7vw, 2rem); }
       .hero .subtitle { font-size: .7rem; line-height: 1.25; }
@@ -152,19 +156,16 @@
         <article class="stay-card">
           <div class="stay-title"><strong>格拉斯麗新宿酒店</strong><span class="badge">新宿</span></div>
           <p class="dates">12/24 入住－12/26 退房｜2 晚</p>
-          <p>東京都新宿區歌舞伎町，抵達東京後的第一段住宿。</p>
           <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div>
         </article>
         <article class="stay-card">
           <div class="stay-title"><strong>箱根水明莊</strong><span class="badge">箱根湯本</span></div>
           <p class="dates">12/26 入住－12/27 退房｜1 晚</p>
-          <p>神奈川縣箱根町，安排一晚溫泉住宿。</p>
           <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hakone+Suimeisou" target="_blank" rel="noreferrer">Google Maps ↗</a></div>
         </article>
         <article class="stay-card">
           <div class="stay-title"><strong>格拉斯麗淺草酒店</strong><span class="badge">淺草</span></div>
           <p class="dates">12/27 入住－2027/01/02 退房｜6 晚</p>
-          <p>東京都台東區淺草，後半段東京行程與跨年住宿。</p>
           <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div>
         </article>
       </div>
@@ -175,7 +176,7 @@
       <p class="route">桃園 → 成田機場 → 新宿 → 飯店入住</p>
       <div class="meta-row"><span class="tag city">抵達日</span><span class="tag">電車</span><span class="tag sleep">新宿住宿</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time reserved">19:00</span><span class="what">抵達成田國際機場</span></div><p class="note">入境、領取行李與交通準備，晚間不另排景點。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Narita+International+Airport" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item flight-card"><div class="topline"><span class="time">15:00–19:00</span><span class="what">搭乘飛機 <span class="flight-no">✈ JX804</span></span></div><p class="note">桃園飛往成田；19:00 抵達後辦理入境並領取行李。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Taiwan+Taoyuan+International+Airport" target="_blank" rel="noreferrer">桃園機場 Google Maps ↗</a></div></article>
         <article class="item"><div class="topline"><span class="time">20:30</span><span class="what">前往新宿</span></div><p class="note">依當日班次選擇成田特快或機場巴士，預留入境延誤彈性。</p></article>
         <article class="item"><div class="topline"><span class="time">22:30</span><span class="what">格拉斯麗新宿酒店入住</span></div><p class="note">抵達後休息，晚餐以機場或飯店周邊簡單用餐為主。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
       </div>
@@ -261,10 +262,10 @@
     <section class="day" id="d0102">
       <h2>2027/01/02（六）｜退房・返回台灣</h2>
       <p class="route">淺草 → 機場 → 桃園</p>
-      <div class="meta-row"><span class="tag city">回程日</span><span class="tag">航班待確認</span><span class="tag">預留時間</span></div>
+      <div class="meta-row"><span class="tag city">回程日</span><span class="tag">JX801</span><span class="tag">成田機場</span></div>
       <div class="items">
-        <article class="item"><div class="topline"><span class="time">退房前</span><span class="what">格拉斯麗淺草酒店退房</span></div><p class="note">退房與行李安排依回程航班時間調整。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time reserved">起飛前 3 小時</span><span class="what">抵達機場</span></div><p class="note">回程航班確認後，再補上實際時間、機場與航廈。</p></article>
+        <article class="item"><div class="topline"><span class="time">09:30 前</span><span class="what">格拉斯麗淺草酒店退房</span></div><p class="note">前往成田機場，建議至少於起飛前 3 小時抵達。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Asakusa" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
+        <article class="item flight-card"><div class="topline"><span class="time">13:45–16:50</span><span class="what">搭乘飛機 <span class="flight-no">✈ JX801</span></span></div><p class="note">成田飛往桃園，16:50 抵達台灣。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Narita+International+Airport" target="_blank" rel="noreferrer">成田機場 Google Maps ↗</a></div></article>
       </div>
     </section>
 
