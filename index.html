@@ -123,6 +123,12 @@
     .flight-card .time { min-width: 0; padding: 5px 10px; border-radius: 999px; background: #17477d; color: white; font-size: 1rem; }
     .flight-no { display: inline-flex; margin-left: 8px; padding: 3px 9px; border: 2px solid #17477d; border-radius: 8px; color: #17477d; font-size: .92rem; white-space: nowrap; }
     .note { margin: 6px 0 0; color: var(--muted); font-size: .93rem; }
+    .stop-list { margin-top: 12px; border-top: 1px solid var(--line); }
+    .stop { display: grid; grid-template-columns: 82px minmax(0,1fr); gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .stop:last-child { padding-bottom: 0; border-bottom: 0; }
+    .stop-time { color: var(--road); font-weight: 900; font-size: .86rem; }
+    .stop strong { display: block; margin-bottom: 2px; }
+    .stop p { margin: 0; color: var(--muted); font-size: .9rem; }
     .links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
     .btn { min-height: 36px; display: inline-flex; align-items: center; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: #e7edf5; color: var(--night); text-decoration: none; font-weight: 800; font-size: .86rem; }
     .top-button { position: fixed; right: 16px; bottom: 16px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--accent); color: white; text-decoration: none; box-shadow: 0 4px 14px rgba(24,42,74,.26); }
@@ -130,6 +136,7 @@
     @media (max-width:820px) { .stay-grid { grid-template-columns: 1fr; } }
     @media (max-width:650px) {
       .topline { display: grid; grid-template-columns: 82px 1fr; }
+      .stop { grid-template-columns: 70px minmax(0,1fr); gap: 8px; }
       .flight-card .topline { display: flex; flex-wrap: wrap; }
       .hero { min-height: 0; aspect-ratio: 3 / 1; padding: 10px 14px; }
       .hero h1 { margin-bottom: 4px; font-size: clamp(1.45rem, 7vw, 2rem); }
@@ -273,13 +280,28 @@
       <div class="meta-row"><span class="tag city">皇居</span><span class="tag">歷史散步</span><span class="tag">丸之內</span><span class="tag sleep">淺草住宿</span></div>
       <div class="items">
         <article class="item"><div class="topline"><span class="time">09:00–09:45</span><span class="what">淺草 → 櫻田門</span></div><p class="note">搭銀座線由淺草直達銀座，再步行約 15 分鐘至櫻田門；比為了只少走一段而多次轉車更直覺。從南側開始走，路線一路往東京站，不折返。</p></article>
-        <article class="item"><div class="topline"><span class="time">09:45–10:30</span><span class="what">櫻田門・皇居外苑</span></div><p class="note">由重要歷史城門進入外苑，沿寬闊草地與黑松景觀慢慢步行。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Sakuradamon+Gate" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">10:30–11:30</span><span class="what">二重橋・正門石橋拍照</span></div><p class="note">皇居最經典的外觀取景點；本日不安排進入宮殿區域，停留外苑即可。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Nijubashi+Bridge" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">11:30–13:00</span><span class="what">楠木正成像・丸之內午餐</span></div><p class="note">從外苑北行看銅像，再往日比谷或丸之內用餐；年末店家可能縮短營業，優先選可線上訂位的餐廳。</p></article>
-        <article class="item"><div class="topline"><span class="time">13:15–14:15</span><span class="what">和田倉噴水公園</span></div><p class="note">沿護城河走至和田倉門，這段把皇居景觀自然接到丸之內。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Wadakura+Fountain+Park" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">14:30–16:30</span><span class="what">丸之內仲通・KITTE 屋上庭園</span></div><p class="note">看街景、咖啡與商店，再到 KITTE 屋頂從正面眺望東京站；若屋頂因天候關閉，改在館內休息。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=KITTE+Marunouchi" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">16:45–19:00</span><span class="what">東京站丸之內站舍・晚餐</span></div><p class="note">等天色轉暗後拍紅磚站舍與廣場燈景，再於東京站一帶晚餐；回程搭丸之內線至銀座，轉銀座線直達淺草。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Station+Marunouchi" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">重要</span><span class="what">皇居東御苑本日休園</span></div><p class="note">宮內廳公告東御苑每年 12/28～1/3 休園，因此本日只安排不受休園影響的皇居外苑與二重橋，不把東御苑列入行程。</p><div class="links"><a class="btn" href="https://www.kunaicho.go.jp/e-event/higashigyoen/higashigyoen.html" target="_blank" rel="noreferrer">宮內廳官方資訊 ↗</a></div></article>
+        <article class="item">
+          <div class="topline"><span class="time">09:45–14:15</span><span class="what">皇居外苑散步</span></div>
+          <p class="note">從櫻田門進、沿外苑與護城河一路向北，四個停留點都在同一條步行動線內。</p>
+          <div class="stop-list">
+            <div class="stop"><span class="stop-time">09:45</span><div><strong>櫻田門・皇居外苑</strong><p>由重要歷史城門進入外苑，沿寬闊草地與黑松景觀前進。</p></div></div>
+            <div class="stop"><span class="stop-time">10:30</span><div><strong>二重橋・正門石橋</strong><p>在皇居經典外觀取景點停留拍照，本日不進入宮殿區域。</p></div></div>
+            <div class="stop"><span class="stop-time">11:30</span><div><strong>楠木正成像・日比谷側午餐</strong><p>看完銅像後在外苑南側用餐；年末店家可能縮短營業，優先選可訂位餐廳。</p></div></div>
+            <div class="stop"><span class="stop-time">13:15</span><div><strong>和田倉門・和田倉噴水公園</strong><p>午餐後沿護城河往北，最後由和田倉自然接往丸之內。</p></div></div>
+          </div>
+          <p class="note"><strong>休園提醒：</strong>皇居東御苑每年 12/28～1/3 休園，本卡只安排皇居外苑、二重橋與和田倉，不含東御苑。</p>
+          <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Kokyo+Gaien+National+Garden" target="_blank" rel="noreferrer">皇居外苑 Google Maps ↗</a><a class="btn" href="https://www.kunaicho.go.jp/e-event/higashigyoen/higashigyoen.html" target="_blank" rel="noreferrer">宮內廳休園資訊 ↗</a></div>
+        </article>
+        <article class="item">
+          <div class="topline"><span class="time">14:30–19:00</span><span class="what">丸之內・東京站</span></div>
+          <p class="note">離開皇居區後進入丸之內商業區，區內以步行串聯，最後由東京站返程。</p>
+          <div class="stop-list">
+            <div class="stop"><span class="stop-time">14:30</span><div><strong>丸之內仲通・KITTE 屋上庭園</strong><p>逛街、喝咖啡，再從 KITTE 屋頂眺望東京站；雨天或屋頂關閉就改走館內。</p></div></div>
+            <div class="stop"><span class="stop-time">16:45</span><div><strong>東京站丸之內站舍・晚餐</strong><p>等天色轉暗後拍紅磚站舍與廣場燈景，再於東京站一帶晚餐。</p></div></div>
+            <div class="stop"><span class="stop-time">19:00</span><div><strong>返回淺草</strong><p>搭丸之內線至銀座，轉銀座線直達淺草。</p></div></div>
+          </div>
+          <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Marunouchi+Tokyo" target="_blank" rel="noreferrer">丸之內 Google Maps ↗</a><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Station+Marunouchi" target="_blank" rel="noreferrer">東京站 Google Maps ↗</a></div>
+        </article>
       </div>
     </section>
 
@@ -301,13 +323,20 @@
       <div class="meta-row"><span class="tag city">六本木</span><span class="tag">冬季燈飾</span><span class="tag">夜景</span><span class="tag sleep">淺草住宿</span></div>
       <div class="items">
         <article class="item"><div class="topline"><span class="time">10:30–11:15</span><span class="what">淺草 → 六本木</span></div><p class="note">搭銀座線至銀座，轉日比谷線直達六本木；避開通勤尖峰後再出發。</p></article>
-        <article class="item"><div class="topline"><span class="time">11:15–13:30</span><span class="what">六本木之丘・毛利庭園・午餐</span></div><p class="note">先看蜘蛛雕塑、毛利庭園與公共藝術，午餐直接安排在六本木之丘。</p><div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Roppongi+Hills" target="_blank" rel="noreferrer">Google Maps ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">14:00–16:00</span><span class="what">森美術館 <span class="pending">展覽待確認</span></span></div><p class="note">依 2026 年底當期展覽與年末營業時間決定是否入場；若不看展，可改為六本木商場、咖啡與街區散步。</p><div class="links"><a class="btn" href="https://www.mori.art.museum/en/" target="_blank" rel="noreferrer">森美術館官方網站 ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time reserved">16:00–17:45</span><span class="what">Tokyo City View・日落轉夜景 <span class="pending">建議預約</span></span></div><p class="note">先從高處看東京塔與城市由黃昏轉入夜色；2026 年底開放時間與售票仍需等官方公布。</p><div class="links"><a class="btn" href="https://tcv.roppongihills.com/en/" target="_blank" rel="noreferrer">Tokyo City View 官方網站 ↗</a></div></article>
-        <article class="item"><div class="topline"><span class="time">18:00–19:00</span><span class="what">六本木之丘晚餐</span></div><p class="note">先在館內吃晚餐再拍燈飾，避免拍完才遇到年末餐廳提早收店；建議出發前確認營業時間或訂位。</p></article>
-        <article class="item"><div class="topline"><span class="time">19:10–20:15</span><span class="what">六本木けやき坂冬季燈飾・封面取景</span></div><p class="note">由 TV 朝日本社前一帶往櫸坂中央看，可拍到兩側藍白燈樹與正中央東京塔。上一季官方在聖誕活動結束後，另以冬季燈飾名義從 12/26 延續至 2/22；本次仍須核對 2026–27 官方日期。</p><div class="links"><a class="btn" href="https://maps.app.goo.gl/bzw1FcgLqK1isr1j6" target="_blank" rel="noreferrer">封面取景地 Google Maps ↗</a><a class="btn" href="https://www.roppongihills.com/events/2025/12/0543.html" target="_blank" rel="noreferrer">冬季燈飾官方資料 ↗</a></div></article>
+        <article class="item">
+          <div class="topline"><span class="time">11:15–19:00</span><span class="what">六本木之丘</span></div>
+          <p class="note">毛利庭園、森美術館與 Tokyo City View 都在六本木之丘範圍內，全程以館內與短距離步行串聯。</p>
+          <div class="stop-list">
+            <div class="stop"><span class="stop-time">11:15</span><div><strong>蜘蛛雕塑・公共藝術・毛利庭園</strong><p>先走戶外區域熟悉動線，再回館內午餐。</p></div></div>
+            <div class="stop"><span class="stop-time">12:30</span><div><strong>六本木之丘午餐</strong><p>直接在商場用餐，減少跨區移動。</p></div></div>
+            <div class="stop"><span class="stop-time">14:00</span><div><strong>森美術館 <span class="pending">展覽待確認</span></strong><p>依 2026 年底當期展覽與年末營業時間決定是否入場；不看展可改逛商場或咖啡。</p></div></div>
+            <div class="stop"><span class="stop-time">16:00</span><div><strong>Tokyo City View <span class="pending">建議預約</span></strong><p>從高處看東京塔與城市由黃昏轉入夜色；開放時間與售票待官方公布。</p></div></div>
+            <div class="stop"><span class="stop-time">18:00</span><div><strong>館內晚餐</strong><p>拍燈飾前先吃晚餐，避免年末餐廳提早收店。</p></div></div>
+          </div>
+          <div class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Roppongi+Hills" target="_blank" rel="noreferrer">六本木之丘 Google Maps ↗</a><a class="btn" href="https://www.mori.art.museum/en/" target="_blank" rel="noreferrer">森美術館 ↗</a><a class="btn" href="https://tcv.roppongihills.com/en/" target="_blank" rel="noreferrer">Tokyo City View ↗</a></div>
+        </article>
+        <article class="item"><div class="topline"><span class="time">19:10–20:15</span><span class="what">六本木けやき坂冬季燈飾・封面取景</span></div><p class="note">晚餐後由六本木之丘館內步行到櫸坂街道。從 TV 朝日本社前一帶往櫸坂中央看，可拍到兩側藍白燈樹與正中央東京塔。上一季官方冬季燈飾為 2025/12/26～2026/2/22、17:00～23:00；2026–27 日期仍待公布。</p><div class="links"><a class="btn" href="https://maps.app.goo.gl/bzw1FcgLqK1isr1j6" target="_blank" rel="noreferrer">封面取景地 Google Maps ↗</a><a class="btn" href="https://www.roppongihills.com/events/2025/12/0543.html" target="_blank" rel="noreferrer">冬季燈飾官方資料 ↗</a></div></article>
         <article class="item"><div class="topline"><span class="time">20:15–21:10</span><span class="what">六本木 → 淺草</span></div><p class="note">搭日比谷線至銀座，轉銀座線返回淺草，路線簡單且不需搭到末班車。</p></article>
-        <article class="item"><div class="topline"><span class="time">確認事項</span><span class="what">2026–27 冬季點燈日期待公布</span></div><p class="note">上一季六本木官方冬季燈飾為 2025/12/26～2026/2/22、17:00～23:00，因此先安排在 12/30；待新年度公告後再確認是否完全沿用。</p></article>
       </div>
     </section>
 
