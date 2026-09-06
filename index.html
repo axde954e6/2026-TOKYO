@@ -148,8 +148,9 @@
     @media (max-width:820px) { .stay-grid { grid-template-columns: 1fr; } }
     @media (max-width:650px) {
       .price-summary > span { display: block; margin: 0 0 3px; }
-      .stay-card .stay-facts { align-items: flex-start; flex-direction: column; gap: 3px; }
-      .stay-facts span { margin-left: 0; text-align: left; }
+      .stay-card .stay-facts { align-items: baseline; flex-direction: row; gap: 6px; white-space: nowrap; font-size: .7rem; }
+      .stay-facts span { margin-left: auto; text-align: right; }
+      .stay-facts strong { font-size: .8rem; }
       .topline { display: grid; grid-template-columns: 82px 1fr; }
       .stop { grid-template-columns: 70px minmax(0,1fr); gap: 8px; }
       .flight-card .topline { display: flex; flex-wrap: wrap; }
