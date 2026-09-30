@@ -30,20 +30,20 @@
     }
     a { color: inherit; }
     .hero {
-      min-height: 0;
-      aspect-ratio: 3 / 1;
-      display: grid;
-      align-items: end;
-      padding: 28px 18px 32px;
-      color: white;
+      height: clamp(110px, 20vw, 240px);
+      display: flex;
+      align-items: flex-end;
+      padding: 0 18px 14px;
+      color: #fff;
       background:
-        linear-gradient(180deg, rgba(8,27,32,.04) 20%, rgba(8,27,32,.18) 50%, rgba(8,27,32,.9) 100%),
-        url("tokyo-hero-v4.png") center / cover no-repeat;
+        linear-gradient(180deg, rgba(8,27,32,0) 45%, rgba(8,27,32,.78) 100%),
+        url("docs/tokyo-hero.jpg?v=20260930") center / cover no-repeat;
     }
-    .hero-inner { width: min(960px, 100%); margin: 0 auto; }
+    .hero-inner { width: 100%; }
+    .hero .kicker, .hero .summary { display: none; }
     .kicker { margin: 0 0 10px; font-size: .78rem; font-weight: 850; letter-spacing: .18em; opacity: .8; }
-    h1 { margin: 0 0 12px; font-size: clamp(2.35rem, 9vw, 4.8rem); line-height: 1.02; }
-    .subtitle { max-width: 720px; margin: 0; color: rgba(255,255,255,.92); }
+    h1 { margin: 0 0 4px; font-size: clamp(1.15rem, 2.6vw, 1.7rem); line-height: 1.15; text-shadow: 0 1px 4px rgba(0,0,0,.45); }
+    .subtitle { margin: 0; color: #fff; font-size: clamp(.7rem, 1.4vw, .9rem); text-shadow: 0 1px 3px rgba(0,0,0,.5); }
     .summary { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; margin-top: 18px; }
     .pill {
       display: inline-flex;
@@ -155,10 +155,6 @@
       .topline { display: grid; grid-template-columns: 82px 1fr; }
       .stop { grid-template-columns: 70px minmax(0,1fr); gap: 8px; }
       .flight-card .topline { display: flex; flex-wrap: wrap; }
-      .hero { min-height: 0; aspect-ratio: 3 / 1; padding: 10px 14px; }
-      .hero h1 { margin-bottom: 4px; font-size: clamp(1.45rem, 7vw, 2rem); }
-      .hero .subtitle { font-size: .7rem; line-height: 1.25; }
-      .hero .kicker, .hero .summary { display: none; }
     }
   </style>
 </head>
