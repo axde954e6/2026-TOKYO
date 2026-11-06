@@ -13,5 +13,5 @@
 - 不確定的資訊寫「以官網為準」，不要寫成長篇推測。
 
 ## 流程
-- 使用者要求修改時：改完 commit、push 到指定分支、開 PR、直接 squash merge 到 main，不用再問。
-- merge 後確認 Pages 部署（`pages build and deployment`）成功；deploy 卡住超過 10 分鐘，就推一個不影響內容的小 commit 重新觸發。
+- 使用者要求修改時：改完直接 commit 並 push 到 `main`（跟神戶網頁一樣），不開分支、不開 PR、不用再問。
+- push 後確認 Pages 部署（`pages build and deployment`）成功；失敗或卡住時，等幾分鐘再推一個不影響內容的小 commit 重新觸發。
